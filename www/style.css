@@ -1,0 +1,68 @@
+body {
+    background-color: black;
+    overflow: hidden; /* Hide any overflow */
+}
+
+/* Container for the glowing ring on the right */
+.square {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Glowing ring effect on the right */
+.square span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, transparent 50%, rgba(0, 13, 255, 0.23) 60%);
+    box-shadow: 0 0 50px rgb(25, 0, 255), inset 0 0 50px rgb(25, 0, 255);
+    border-radius: 50%; /* Perfect circle for a ring */
+    transition: 0.5s;
+}
+
+/* Animations for the rotating glowing ring */
+.square span:nth-child(1) {
+    animation: animate1 6s linear infinite;
+}
+
+.square span:nth-child(2) {
+    animation: animate2 4s linear infinite;
+}
+
+.square span:nth-child(3) {
+    animation: animate3 8s linear infinite;
+}
+
+/* Keyframes for rotating animations */
+@keyframes animate1 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate3 {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
