@@ -1,21 +1,6 @@
-import pyttsx3
-import pywhatkit
+import os
+import eel
 
-
-#engine
-engine = pyttsx3.init()
-voice = engine.getProperty("voices")
-
-
-def speak(sentence):
-    engine.say(sentence)
-    engine.runAndWait
-
-speak("Hello Sir")
-
-#Functions
-def Youtube_Play(Search):
-    pywhatkit.playonyt(Search)
-
-
-def WhatsappMsg()
+eel.init("www")
+os.system('start msedge.exe --app="http://localhost:8000/index.html"')
+eel.start('index.html', mode=None, host='localhost', block=True)
